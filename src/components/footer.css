@@ -29,7 +29,8 @@
   color: #fff;
   font-family: 'Roboto';
   font-size: 17px;
-  border: 1px solid #1F5BB3
+  border: 1px solid #1F5BB3;
+  cursor: pointer;
 }
 
 .footer {
