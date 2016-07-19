@@ -1,0 +1,15 @@
+.surface {
+  background-image: url("./ambiance.jpeg");
+}
+
+.deepwater {
+  background-image: url("./diver.jpeg");
+}
+
+.seabed {
+  background-image: url("./diver-sun.jpg");
+}
+
+.rightArrow {
+  background-image: url("./arrow-right.svg");
+}

@@ -2,7 +2,7 @@ var path = require('path');
 
 var config = {
   entry: [
-    './index.css',
+    './src/index.js',
   ],
   output: {
     path: path.join(__dirname, 'dist'),
@@ -10,27 +10,21 @@ var config = {
   },
   module: {
     loaders: [
-    //   {
-    //     test: /\.js$/,
-    //     exclude: /node_modules/,
-    //     loaders: ['babel', 'eslint'],
-    //   },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loaders: ['babel', 'eslint'],
+      },
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        loader: 'style!css!postcss'
-        // loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+        loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss',
       },
       { test: /\.svg/, loader: 'svg-url-loader' },
         {
         test: /\.(html|ico|jpe?g|png|gif)$/,
         loader: "file"
       },
-    ],
-  },
-  resolveLoader: {
-    root: [
-      path.join(__dirname, 'node_modules'),
     ],
   },
   resolve: {
@@ -44,7 +38,7 @@ var config = {
     colors: true,
     historyApiFallback: true,
     inline: true,
-    port: 3000,
+    port: 3002,
     host: "0.0.0.0",
   },
    postcss: function () {

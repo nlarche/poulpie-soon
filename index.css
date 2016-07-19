@@ -11,8 +11,7 @@ body {
 .surface {
     min-height: 100vh;
     background: url("./image/ambiance.jpeg");
-    background-size: cover;
-   
+    background-size: cover;   
 }
 
 .deepwater {

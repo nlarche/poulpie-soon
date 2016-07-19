@@ -1,0 +1,28 @@
+.container {
+  min-height: 100vh;
+  background-size: cover;
+}
+
+.text {
+  padding-left: 45vw;
+  padding-top: 20vh;
+}
+
+.fonts {
+  color: white;
+  font-family: 'Roboto';
+}
+
+.title {
+  composes: fonts;
+  font-size: 3em;
+  font-weight: 300;
+  line-height: 2em;
+}
+
+.subtitle {
+  composes: fonts;
+  font-size: 2em;
+  font-weight: 200;
+  line-height: 1em;
+}
