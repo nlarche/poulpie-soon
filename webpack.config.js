@@ -44,7 +44,14 @@ var config = {
     colors: true,
     historyApiFallback: true,
     inline: true,
-    port: 3001,
-  }
+    port: 3000,
+    host: "0.0.0.0",
+  },
+   postcss: function () {
+    return [
+        require('stylelint'),
+        require("postcss-cssnext")({ browsers: "last 2 versions" })
+    ];
+    }
 };
 module.exports = config;
