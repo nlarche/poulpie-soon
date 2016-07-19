@@ -9,7 +9,7 @@ export default class Menu extends React.Component {
   render() {
     return (
       <div className={Styles.container} >
-         menu
+         Logo
       </div>
     );
   }

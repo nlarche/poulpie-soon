@@ -10,6 +10,14 @@
   background-image: url("./diver-sun.jpg");
 }
 
+.hand {
+  background-image: url("./hand.jpg");
+}
+
+.octopus {
+  background-image: url("./octopus.jpg");
+}
+
 .rightArrow {
   background-image: url("./arrow-right.svg");
 }

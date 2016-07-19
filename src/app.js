@@ -15,7 +15,7 @@ export default class App extends React.Component {
     const app = [
       {
         id: 1,
-        image: Image.surface,
+        image: Image.octopus,
         text1: 'Réseau de plongeur',
         text2: 'Divers network',
       },
