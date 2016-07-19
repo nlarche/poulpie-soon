@@ -1,6 +1,7 @@
   .container {
     min-height: 100vh;
     background-size: cover;
+    background-position: 50% 50%;
     width: 100%;
   }
 
