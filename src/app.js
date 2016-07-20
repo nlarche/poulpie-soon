@@ -15,19 +15,19 @@ export default class App extends React.Component {
     const app = [
       {
         id: 1,
-        image: Image.octopus,
+        background: Styles.firstSection,
         text1: 'Réseau de plongeur',
         text2: 'Divers network',
       },
       {
         id: 2,
-        image: Image.deepwater,
+        background: Image.deepwater,
         text1: 'Réservez et plongez',
         text2: 'Click & Dive',
       },
       {
         id: 3,
-        image: Image.seabed,
+        background: Image.seabed,
         text1: 'Bientôt - Soon',
       }
     ];
@@ -35,7 +35,7 @@ export default class App extends React.Component {
     return (
       <div className={Styles.container}>
         <Menu />
-        {app.map(s => <Section key={s.id} image={s.image}
+        {app.map(s => <Section key={s.id} background={s.background}
           text1={s.text1} text2={s.text2} />) }
          <Footer />
       </div>

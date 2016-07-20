@@ -8,7 +8,7 @@ export default class Section extends React.Component {
   }
   render() {
 
-    const classe = Styles.container + ' ' + this.props.image;
+    const classe = Styles.container + ' ' + this.props.background;
     return (
       <div className={classe} >
           <div className={Styles.text} >
