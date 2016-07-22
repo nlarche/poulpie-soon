@@ -1,20 +1,28 @@
 import React from 'react';
 
-import Styles from './section.css';
-
 export default class Section extends React.Component {
   constructor() {
     super();
   }
   render() {
-
-    const classe = Styles.container + ' ' + this.props.background;
     return (
-      <div className={classe} >
-          <div className={Styles.text} >
-            <h1 className={Styles.title} >{this.props.text1}</h1>
-            <span className={Styles.subtitle} >{this.props.text2}</span>
-          </div>
+      <div className="card is-fullwidth">
+        <header className="card-header">
+          <p className="card-header-title">
+            {this.props.text1}
+          </p>
+          <a className="card-header-icon">
+            <i className="fa fa-angle-down"></i>
+          </a>
+        </header>
+        <div className="card-image">
+          <figure className="image is-4by3">
+            <img src={this.props.image} alt={this.props.image} />
+          </figure>
+        </div>
+        <div className="card-content" >
+          <span className="subtitle" >{this.props.text2}</span>
+        </div>
       </div>
     );
   }

@@ -1,14 +1,12 @@
 import React from 'react';
 
-import Styles from './menu.css';
-
 export default class Menu extends React.Component {
   constructor() {
     super();
   }
   render() {
     return (
-      <div className={Styles.container} >
+      <div className="hero is-info is-bold" >
          Logo
       </div>
     );
