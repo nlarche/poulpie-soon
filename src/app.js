@@ -18,14 +18,18 @@ export default class App extends React.Component {
         image: "./image/diver.jpeg",
         text1: 'Réseau de plongeur',
         text2: 'Divers network',
-        class: "column is-offset-one-quarter"
       },
       {
         id: 2,
         image: "./image/diver-sun.jpg",
         text1: 'Réservez et plongez',
         text2: 'Click & Dive',
-        class: "column"
+      },
+      {
+        id: 3,
+        image: "./image/diver.jpg",
+        text1: 'texte test',
+        text2: 'test',
       }
     ];
 
@@ -33,9 +37,9 @@ export default class App extends React.Component {
       <div className="layout-default">
         <Header />
         <div className="section">
-          <div className="columns" >
-            {app.map(s => <div className={s.class} ><Section  key={s.id} image={s.image}
-              text1={s.text1} text2={s.text2} /></div>) }
+          <div className="tile is-ancestor" >
+            {app.map(s => <Section  key={s.id} image={s.image}
+              text1={s.text1} text2={s.text2} />) }
           </div>
         </div>
         <div className="control is-grouped">
@@ -47,7 +51,6 @@ export default class App extends React.Component {
             <input type="submit" value="ok" className="button is-primary"/>
           </div>
         </div>
-
         <Footer />
       </div>
     );

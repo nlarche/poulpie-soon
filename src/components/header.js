@@ -24,11 +24,13 @@ export default class Header extends React.Component {
           </div>
         </div>
         <div className="hero-body">
-          <div className="container">
-            <p className={imageCalss}>
-              <img src="./image/poulpie.svg" alt={this.props.image} />
-            </p>
-            <h1 className="title">Plongez connectez</h1>
+          <div className="tile is-ancestor">
+            <div className="tile is-child ">
+              <p className={imageCalss}>
+                <img src="./image/poulpie.svg" alt={this.props.image} />
+              </p>
+              <h1 className="title">Plonger connecté</h1>
+            </div>
           </div>
         </div>
       </section>
