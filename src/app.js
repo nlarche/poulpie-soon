@@ -27,7 +27,7 @@ export default class App extends React.Component {
       },
       {
         id: 3,
-        image: "./image/diver.jpg",
+        image: "./image/hand.jpg",
         text1: 'texte test',
         text2: 'test',
       }
