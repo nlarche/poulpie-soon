@@ -12,8 +12,8 @@ export default class Header extends React.Component {
 
     return (
       <section className="hero is-info has-text-centered">
-        <div className="hero-header">
-          <div className="container">
+        <div className="container">
+          <div className="hero-header">
             <div className="nav">
               <div className="nav-left">
                 <p className="nav-item">
@@ -21,15 +21,16 @@ export default class Header extends React.Component {
                 </p>
               </div>
             </div>
+
           </div>
-        </div>
-        <div className="hero-body">
-          <div className="tile is-ancestor">
-            <div className="tile is-child ">
-              <p className={imageCalss}>
-                <img src="./image/poulpie.svg" alt={this.props.image} />
-              </p>
-              <h1 className="title">Plonger connecté</h1>
+          <div className="hero-body">
+            <div className="tile is-ancestor">
+              <div className="tile is-child ">
+                <p className={imageCalss}>
+                  <img src="./image/poulpie.svg" alt={this.props.image} />
+                </p>
+                <h1 className="title">Plonger connecté</h1>
+              </div>
             </div>
           </div>
         </div>
