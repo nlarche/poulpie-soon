@@ -6,7 +6,7 @@ export default class Section extends React.Component {
   }
   render() {
     return (
-      <div className="card is-fullwidth">
+      <div className="card is-128x128">
         <header className="card-header">
           <p className="card-header-title">
             {this.props.text1}
