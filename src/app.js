@@ -1,10 +1,11 @@
 import React from 'react';
 
-import Menu from './components/menu';
+import Header from './components/header';
 import Section from './components/section';
 import Footer from './components/footer';
-import Image from './style/image.css';
-import Styles from './app.css';
+import Subscribe from './components/subscribe';
+
+import { diver, diverSun, hand, poulpie } from './image';
 
 export default class App extends React.Component {
   constructor() {
@@ -15,29 +16,37 @@ export default class App extends React.Component {
     const app = [
       {
         id: 1,
-        background: Styles.firstSection,
+        image: diver,
         text1: 'Réseau de plongeur',
         text2: 'Divers network',
       },
       {
         id: 2,
-        background: Image.deepwater,
-        text1: 'Réservez et plongez',
-        text2: 'Click & Dive',
+        image: diverSun,
+        text1: '',
+        text2: '',
       },
       {
         id: 3,
-        background: Image.seabed,
-        text1: 'Bientôt - Soon',
-      }
+        image: hand,
+        text1: 'Réservez et plongez',
+        text2: 'Click & Dive',
+      },
     ];
 
     return (
-      <div className={Styles.container}>
-        <Menu />
-        {app.map(s => <Section key={s.id} background={s.background}
-          text1={s.text1} text2={s.text2} />) }
-         <Footer />
+      <div>
+        <Header logo={poulpie} />
+        <div className="section">
+          <div className="container">
+            <div className="tile is-ancestor" >
+              {app.map(s => <Section  key={s.id} image={s.image}
+                text1={s.text1} text2={s.text2} />) }
+            </div>
+          </div>
+        </div>
+        <Subscribe />
+        <Footer />
       </div>
     );
   }
