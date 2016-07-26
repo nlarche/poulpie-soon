@@ -27,7 +27,7 @@ export default class Header extends React.Component {
             <div className="tile is-ancestor">
               <div className="tile is-child ">
                 <p className={imageCalss}>
-                  <img src="./image/poulpie.svg" alt={this.props.image} />
+                  <img src={this.props.logo} alt={this.props.image} />
                 </p>
                 <h1 className="title">Plonger connecté</h1>
               </div>

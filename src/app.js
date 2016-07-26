@@ -4,7 +4,8 @@ import Header from './components/header';
 import Section from './components/section';
 import Footer from './components/footer';
 import Subscribe from './components/subscribe';
-//import Image from './style/image.css';
+
+import { diver, diverSun, hand, poulpie } from './image';
 
 export default class App extends React.Component {
   constructor() {
@@ -15,19 +16,19 @@ export default class App extends React.Component {
     const app = [
       {
         id: 1,
-        image: "./image/diver.jpeg",
+        image: diver,
         text1: 'Réseau de plongeur',
         text2: 'Divers network',
       },
       {
         id: 2,
-        image: "./image/hand.jpg",
+        image: diverSun,
         text1: '',
         text2: '',
       },
       {
         id: 3,
-        image: "./image/diver-sun.jpg",
+        image: hand,
         text1: 'Réservez et plongez',
         text2: 'Click & Dive',
       },
@@ -35,7 +36,7 @@ export default class App extends React.Component {
 
     return (
       <div>
-        <Header />
+        <Header logo={poulpie} />
         <div className="section">
           <div className="container">
             <div className="tile is-ancestor" >
