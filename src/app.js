@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ga from 'react-google-analytics';
+
 import Header from './components/header';
 import Section from './components/section';
 import Footer from './components/footer';
@@ -7,9 +9,16 @@ import Subscribe from './components/subscribe';
 
 import { diver, diverSun, hand, poulpie } from './image';
 
+const GoogleAnalyticsInitiailizer = ga.Initializer;
+const isProduction = process.env.NODE_ENV === "production";
+
 export default class App extends React.Component {
   constructor() {
     super();
+    if (isProduction) {
+      ga("create", "UA-76365657-2", "auto");
+      ga("send", "pageview");
+    }
   }
   render() {
 
@@ -47,6 +56,7 @@ export default class App extends React.Component {
         </div>
         <Subscribe />
         <Footer />
+        <GoogleAnalyticsInitiailizer />
       </div>
     );
   }
