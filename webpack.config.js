@@ -112,7 +112,6 @@ if (production) {
         screw_ie8: true
       }
     }),
-    //new ExtractTextPlugin('[name].[contenthash].css')
   ];
 
 }
