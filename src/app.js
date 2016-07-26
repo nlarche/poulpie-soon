@@ -21,16 +21,16 @@ export default class App extends React.Component {
       },
       {
         id: 2,
+        image: "./image/hand.jpg",
+        text1: '',
+        text2: '',
+      },
+      {
+        id: 3,
         image: "./image/diver-sun.jpg",
         text1: 'Réservez et plongez',
         text2: 'Click & Dive',
       },
-      {
-        id: 3,
-        image: "./image/hand.jpg",
-        text1: 'texte test',
-        text2: 'test',
-      }
     ];
 
     return (
