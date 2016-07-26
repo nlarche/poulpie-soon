@@ -1,5 +1,17 @@
 .logo {
-  height: 512px;
-  width: 512px;
   display: inline-block;
+}
+
+@media screen and (min-width: 512px) {
+  .logo {
+    height: 512px;
+    width: 512px;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .logo {
+    height: 256px;
+    width: 256px;
+  }
 }

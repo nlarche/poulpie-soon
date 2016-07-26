@@ -1,13 +1,18 @@
 import React from 'react';
 
+import Style from './section.css';
+
 export default class Section extends React.Component {
   constructor() {
     super();
   }
   render() {
+
+    const cardClasses = "card is-128x128 " + Style.cardMobile;
+
     return (
       <div className="tile is-child" >
-        <div className="card is-128x128">
+        <div className={cardClasses} >
           <header className="card-header">
             <p className="card-header-title">
               {this.props.text1}

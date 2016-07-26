@@ -48,7 +48,7 @@ export default class App extends React.Component {
         <Header logo={poulpie} />
         <div className="section">
           <div className="container">
-            <div className="tile is-ancestor" >
+            <div className="tile is-ancestor  " >
               {app.map(s => <Section  key={s.id} image={s.image}
                 text1={s.text1} text2={s.text2} />) }
             </div>
