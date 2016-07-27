@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "CONFIG=$(pwd)/__tests__/helpers/webpack.config.js BABEL_DISABLE_CACHE=1 NODE_ENV=test ava",
+    "check-coverage": "nyc check-coverage --lines 90 --functions 90 --branches 90",
+    "coverage" : "nyc npm run test && npm run check-coverage",
     "start": "webpack-dev-server",
-    "build": "npm test && rimraf dist && NODE_ENV=production webpack",
+    "build": "npm run coverage && rimraf dist && NODE_ENV=production webpack",
     "copy": "copyup www/* dist",
     "deploy": "npm run build && npm run copy && gh-pages -d dist"
   },
@@ -36,6 +38,7 @@
     "gh-pages": "^0.11.0",
     "html-webpack-plugin": "2.22.0",
     "jsdom": "^9.4.1",
+    "nyc": "^7.1.0",
     "postcss-cssnext": "^2.7.0",
     "postcss-loader": "^0.9.1",
     "rimraf": "^2.5.4",
