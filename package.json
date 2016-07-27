@@ -6,7 +6,7 @@
   "scripts": {
     "test": "CONFIG=$(pwd)/__tests__/helpers/webpack.config.js BABEL_DISABLE_CACHE=1 NODE_ENV=test ava",
     "start": "webpack-dev-server",
-    "build": "rimraf dist && NODE_ENV=production webpack",
+    "build": "npm test && rimraf dist && NODE_ENV=production webpack",
     "copy": "copyup www/* dist",
     "deploy": "npm run build && npm run copy && gh-pages -d dist"
   },
