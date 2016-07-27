@@ -4,7 +4,7 @@
   "description": "poulpie",
   "main": "index.js",
   "scripts": {
-    "test": "ava",
+    "test": "CONFIG=$(pwd)/__tests__/helpers/webpack.config.js BABEL_DISABLE_CACHE=1 NODE_ENV=test ava",
     "start": "webpack-dev-server",
     "build": "rimraf dist && NODE_ENV=production webpack",
     "copy": "copyup www/* dist",
@@ -22,6 +22,7 @@
     "babel-core": "^6.10.4",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-object-rest-spread": "^6.8.0",
+    "babel-plugin-webpack-loaders": "^0.7.0",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",
     "chai": "^3.5.0",
@@ -61,7 +62,7 @@
     "failFast": true,
     "tap": true,
     "require": [
-      "./test/helpers/setup-browser-env.js"
+      "./__tests__/helpers/setup-browser-env.js"
     ],
     "babel": "inherit"
   }
