@@ -8,7 +8,7 @@ export default class Header extends React.Component {
   }
   render() {
 
-    const imageCalss = 'image ' + Style.logo;
+    const imageClass = 'image ' + Style.logo;
 
     return (
       <section className="hero is-info has-text-centered">
@@ -21,12 +21,11 @@ export default class Header extends React.Component {
                 </p>
               </div>
             </div>
-
           </div>
           <div className="hero-body">
             <div className="tile is-ancestor">
               <div className="tile is-child ">
-                <p className={imageCalss}>
+                <p className={imageClass}>
                   <img src={this.props.logo} alt={this.props.image} />
                 </p>
                 <h1 className="title">Plonger connecté</h1>
