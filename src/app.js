@@ -31,14 +31,14 @@ export default class App extends React.Component {
       },
       {
         id: 2,
-        image: diverSun,
-        text1: '',
-        text2: '',
+        image: hand,
+        text1: 'Plonger ensemble',
+        text2: 'Diving together',
       },
       {
         id: 3,
-        image: hand,
-        text1: 'Réservez et plongez',
+        image: diverSun,
+        text1: 'Réserver et plonger',
         text2: 'Click & Dive',
       },
     ];
@@ -48,8 +48,9 @@ export default class App extends React.Component {
         <Header logo={poulpie} />
         <div className="section">
           <div className="container">
-            <div className="tile is-ancestor  " >
-              {app.map(s => <Section  key={s.id} image={s.image}
+            <div className="tile is-ancestor" >
+              {app.map(s => <Section
+                key={s.id} image={s.image}
                 text1={s.text1} text2={s.text2} />) }
             </div>
           </div>
